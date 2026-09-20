@@ -1,0 +1,375 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* BODY */
+body{
+    background-color: #6F1D1B;
+    font-family: "Overpass", sans-serif;
+}
+
+
+/* HEADER */
+
+/* Logo */
+.logo{
+    width: 80px;
+    height: auto;
+}
+
+
+/* Navbar de Bootstrap adaptada a CopiWear */
+header .navbar{
+    background: linear-gradient(135deg, #432818, #6F1D1B);
+    padding: 1rem;
+}
+
+/* Separación y posición de los links */
+header .navbar-nav{
+    gap: 20px;
+}
+
+header .navbar-collapse{
+    justify-content: flex-end;
+}
+
+/* Links de la Navbar */
+header .nav-link{
+    color: #FFE6A7;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+header .nav-link:hover{
+    color: #FFE8E7;
+}
+
+header .nav-link:focus{
+    color: #99582A;
+    background-color: #FFE6A7;
+    border-radius: 5px;
+}
+
+header .nav-link:active{
+    color: #432818;
+    background-color: #99582A;
+}
+
+/* MAIN */
+
+main{
+    padding: 1rem;
+}
+
+
+main section{
+    background: linear-gradient(135deg, #99582A, #6F1D1B);
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #FFE6A7;
+}
+
+
+main section li{
+    list-style: none;
+    color: #FFF8E7;
+    margin-bottom: 0.5rem;
+}
+
+
+/* INICIO */
+
+.inicio_contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #FFE6A7;
+}
+
+
+/* CATEGORÍAS */
+
+.categorias{
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+        "titulo"
+        "deportiva"
+        "casual"
+        "formal";
+
+    gap: 20px;
+}
+
+
+.categorias h2{
+    grid-area: titulo;
+}
+
+
+.categoria_deportiva{
+    grid-area: deportiva;
+}
+
+
+.categoria_casual{
+    grid-area: casual;
+}
+
+
+.categoria_formal{
+    grid-area: formal;
+}
+
+
+/* Pantallas grandes */
+
+@media (min-width: 1024px){
+
+    .categorias{
+        grid-template-columns: 1fr 1fr 1fr;
+
+        grid-template-areas:
+            "titulo titulo titulo"
+            "deportiva casual formal";
+    }
+
+}
+
+
+/* PROYECTOS */
+
+.proyectos_contenido{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+/* PRODUCTOS - CSS GRID */
+
+.productos{
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+        "titulo"
+        "producto1"
+        "producto2";
+
+    gap: 20px;
+}
+
+
+/* Título de productos */
+
+.productos h2{
+    grid-area: titulo;
+}
+
+
+/* Ubicación de cada producto */
+
+.producto1{
+    grid-area: producto1;
+}
+
+
+.producto2{
+    grid-area: producto2;
+}
+
+
+/* Producto común */
+
+.producto{
+    background-color: #432818;
+}
+
+
+/* Cards de Bootstrap */
+
+.producto.card{
+    border: 1px solid #FFE6A7;
+    color: #FFF8E7;
+    transition: 0.3s ease;
+}
+
+.producto.card:hover{
+    transform: scale(1.02);
+}
+
+.producto.card:focus{
+    border: 2px solid #FFE6A7;
+}
+
+.producto.card:active{
+    transform: scale(0.98);
+}
+
+/* Cuerpo de la Card */
+
+.producto .card-body{
+    background-color: #432818;
+}
+
+
+/* Título de la Card */
+
+.producto .card-title{
+    color: #FFE6A7;
+}
+
+
+/* Texto de la Card */
+
+.producto .card-text{
+    color: #FFF8E7;
+}
+
+
+/* Imagen de la Card */
+
+.producto .card-img-top{
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+
+/* Productos en pantallas grandes */
+
+@media (min-width: 1024px){
+
+    .productos{
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-areas:
+            "titulo titulo"
+            "producto1 producto2";
+    }
+
+}
+
+
+/* TÍTULOS */
+
+h1{
+    color: #FFE6A7;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+
+h2{
+    color: #6F1D1B;
+}
+
+
+/* PÁRRAFOS */
+
+p{
+    color: #FFF8E7;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+
+/* IMÁGENES */
+
+.imagen_yo{
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.imagen_prod{
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* FOOTER */
+
+footer{
+    background-color: #432818;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+
+footer nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+
+.RRSS_imagen{
+    width: 1.5rem;
+    height: auto;
+}
+
+
+/* CAROUSEL */
+
+.galeria .carousel-item img{
+    width: 50%;
+    height: 400px;
+    object-fit: contain;
+}
+
+/* Estados interactivos de los botones del Carousel */
+
+.galeria .carousel-control-prev,
+.galeria .carousel-control-next{
+    transition: 0.3s ease;
+}
+
+.galeria .carousel-control-prev:hover,
+.galeria .carousel-control-next:hover{
+    background-color: rgba(67, 40, 24, 0.5);
+}
+
+.galeria .carousel-control-prev:focus,
+.galeria .carousel-control-next:focus{
+    background-color: rgba(255, 230, 167, 0.3);
+}
+
+.galeria .carousel-control-prev:active,
+.galeria .carousel-control-next:active{
+    transform: scale(0.95);
+}
+
+
+/* ACCORDION */
+
+.informacion_categorias .accordion-button{
+    background-color: #432818;
+    color: #FFE6A7;
+    font-weight: 700;
+}
+
+
+.informacion_categorias .accordion-body{
+    background-color: #99582A;
+    color: #FFF8E7;
+}
